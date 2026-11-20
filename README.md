@@ -19,6 +19,6 @@ Add switch -d to enable debug mode.
 
 Credentials and InfluxDB connection details are configured in `my_config.py`. Each setting is read from an environment variable (`MELCLOUD_USER`, `MELCLOUD_PWD`, `INFLUXDB_HOST`, `INFLUXDB_PORT`, `INFLUXDB_USER`, `INFLUXDB_PWD`, `INFLUXDB_DATABASE`); if a variable is not set, the example default value in the file is used.
 
-Requires the `influxdb` Python package (`pip install influxdb`).
+Data is written with raw HTTP calls to the InfluxDB 1.x `/write` API using the `requests` package (`pip install requests`); the `influxdb` Python package is not needed.
 
 **Note:** Only InfluxDB release 1.x is supported. InfluxDB 2.x and later are not supported.
